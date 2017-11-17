@@ -4,13 +4,8 @@ Thydia
 Ideas
 ------
 - [X] Player animations
-- [ ] NPC
-- [ ] Animals
-  - [ ] Chicken
-  - [ ] Sheep
-  - [ ] Cow
 - [ ] Inventory System
-  - [ ] Inventory
+  - [X] Inventory
   - [ ] Chest
 - [ ] Merchants
 - [ ] Quests
