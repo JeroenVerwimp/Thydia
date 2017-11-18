@@ -11,6 +11,7 @@ import be.goofydev.thydia.gui.components.GuiButton.ClickHandler;
 import be.goofydev.thydia.inventory.items.Items;
 import be.goofydev.thydia.level.Level;
 import be.goofydev.thydia.level.generators.LevelGeneratorImage;
+import be.goofydev.thydia.level.generators.LevelGeneratorRandom;
 import be.goofydev.thydia.sounds.Sound;
 import be.goofydev.thydia.util.TileCoord;
 
@@ -48,12 +49,28 @@ public class GuiMainMenu extends Gui {
 				Game.instance.setGui(null);
 			}
 		}));
+		
 		addComponent(new GuiButton(Game.width / 2 - 31, 85, 63, 17, "Exit", new ClickHandler() {
 			@Override
 			public void click(int x, int y, int button) {
 				Game.instance.stop();
 			}
-		}));		
+		}));
+		
+		addComponent(new GuiButton(Game.width / 2 - 48, 110, 96, 17, "Random", new ClickHandler() {
+			@Override
+			public void click(int x, int y, int button) {
+				Level level = new LevelGeneratorRandom(50, 50).generate();
+				Game.instance.setLevel(level);
+				
+				EntityPlayer player = new EntityPlayer(new TileCoord(4, 4), Game.instance.getKeyboard());
+				level.addEntity(player);
+				Game.instance.setPlayer(player);
+				
+				Sound.music_bg.stop();
+				Game.instance.setGui(null);
+			}
+		}));
 	}
 
 	@Override

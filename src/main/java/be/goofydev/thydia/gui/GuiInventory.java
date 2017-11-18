@@ -21,7 +21,6 @@ public class GuiInventory extends Gui{
 
 	@Override
 	public void onInit() {
-		
 	}
 
 	@Override
