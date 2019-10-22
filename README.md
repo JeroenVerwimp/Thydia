@@ -1,17 +1,4 @@
 Thydia
 ======
 
-Ideas
-------
-- [X] Player animations
-- [ ] Inventory System
-  - [X] Inventory
-  - [ ] Chest
-- [ ] Merchants
-- [ ] Quests
-- [ ] Saving / Loading
-- [ ] Multiplayer
-
-Story (maybe???)
-------
-You wake up on a beach without remembering anything. The only thing you remember is your name.
+Thydia was a game I created in Java (no libs) to help me better understand the possibilities of Java and the concepts of game making.
